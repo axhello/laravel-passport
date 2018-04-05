@@ -33,9 +33,7 @@ class HomeController extends Controller
 
     public function login(Request $request)
     {
-//        dd($request->root());
 //        $needs = $this->validate($request, rules('login'));
-
         $user = User::where('email', $request->get('email'))->first();
 
         if (!$user) {
